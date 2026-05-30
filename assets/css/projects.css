@@ -1,0 +1,84 @@
+/* ===========================
+   PROJECT HERO
+   =========================== */
+
+.project-hero {
+    margin-bottom: 2rem;
+}
+
+.project-hero .subtitle {
+    opacity: 0.8;
+    margin-top: -0.5rem;
+}
+
+/* ===========================
+   VIDEO CONTAINER
+   =========================== */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ===========================
+   PROJECT LINKS (BUTTONS)
+   =========================== */
+
+.project-links {
+    display: flex;
+    margin: 1.5rem 0;
+    gap: 1rem;
+}
+
+.project-links .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 100px;
+    background: var(--accent);
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.project-links .btn img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.project-links .btn:hover {
+    filter: drop-shadow(0 0 12px var(--accent));
+}
+
+/* ===========================
+   GALLERY
+   =========================== */
+
+.gallery {
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.gallery-panels {
+    display: grid;    
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
