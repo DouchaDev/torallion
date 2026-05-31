@@ -26,6 +26,16 @@
     }
     /* Force the CSS grid to centre hero art on mobile (margin:auto alone is unreliable on grid items) */
     @media (max-width: 900px) { .hero__art { justify-self: center; } }
+    /* When "TORALLION TECHNOLOGIES" wraps to two lines, centre both lines so the shorter word
+       doesn't hang left — harmless when on one line (container = text width, centering = no-op) */
+    .footer__brand > div { text-align: center; }
+    /* Prevent "Founder Portfolio" from line-breaking mid-phrase inside its link */
+    .footer__link { white-space: nowrap; }
+    /* On narrower viewports centre both the brand block and the nav links */
+    @media (max-width: 760px) {
+      .footer { align-items: center; }
+      .footer__nav { flex-wrap: wrap; justify-content: center; width: 100%; }
+    }
   </style>
   <script src="script.js" defer></script>
 </head>
