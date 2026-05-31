@@ -13,9 +13,18 @@
 
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Ensure the sticky nav always covers edge-to-edge (Android Chrome + backdrop-filter can under-calculate width) */
+    /* clip at the html level so pinch-zoom-out never reveals content wider than the viewport.
+       overflow-x:clip (unlike hidden) does NOT create a scroll container, so position:sticky still works. */
+    html { overflow-x: clip; }
+    /* belt-and-suspenders: force the sticky nav to always span the full layout width */
     .nav { width: 100%; }
-    /* Force grid to centre the hero art on mobile — margin:auto alone is unreliable as a grid-item in some Chrome versions */
+    /* On phones narrower than ~460 px (e.g. S23 at DPR 3×, logical width 360 px) the nav flex row
+       — brand + gap + theme-btn + gap + menu-btn — can overflow the viewport.
+       Tighten gap and padding so all three items fit without overflowing. */
+    @media (max-width: 460px) {
+      .nav__inner { gap: 8px; padding-left: 14px; padding-right: 14px; }
+    }
+    /* Force the CSS grid to centre hero art on mobile (margin:auto alone is unreliable on grid items) */
     @media (max-width: 900px) { .hero__art { justify-self: center; } }
   </style>
   <script src="script.js" defer></script>
