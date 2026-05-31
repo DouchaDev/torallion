@@ -27,6 +27,8 @@
     /* Centre the Hire Torallion CTA in the mobile dropdown.
        styles.css sets align-self:flex-start (left-aligned, auto width) — override to centre. */
     .nav.open .nav__cta { align-self: center; }
+    /* Remove float animation from the hero image — it's above the fold so motion adds nothing */
+    .hero__t--image, .hero__t--image img { animation: none; }
     /* Force the CSS grid to centre hero art on mobile (margin:auto alone is unreliable on grid items) */
     @media (max-width: 900px) { .hero__art { justify-self: center; } }
 /* When "TORALLION TECHNOLOGIES" wraps to two lines, centre both lines so the shorter word
