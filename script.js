@@ -88,6 +88,8 @@
       if (alreadyVisible) {
         el.classList.add("is-visible");
       } else {
+        // Footer: skip translateY — sliding the footer up shifts page height and causes scroll judder
+        if (el === footerEl) el.style.transform = "none";
         el.classList.add("reveal");
         (el === footerEl ? footerIo : sectionIo).observe(el);
       }
