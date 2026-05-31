@@ -24,9 +24,12 @@
     @media (max-width: 460px) {
       .nav__inner { gap: 8px; padding-left: 14px; padding-right: 14px; }
     }
+    /* Centre the Hire Torallion CTA in the mobile dropdown.
+       styles.css sets align-self:flex-start (left-aligned, auto width) — override to centre. */
+    .nav.open .nav__cta { align-self: center; }
     /* Force the CSS grid to centre hero art on mobile (margin:auto alone is unreliable on grid items) */
     @media (max-width: 900px) { .hero__art { justify-self: center; } }
-    /* When "TORALLION TECHNOLOGIES" wraps to two lines, centre both lines so the shorter word
+/* When "TORALLION TECHNOLOGIES" wraps to two lines, centre both lines so the shorter word
        doesn't hang left — harmless when on one line (container = text width, centering = no-op) */
     .footer__brand > div { text-align: center; }
     /* Prevent "Founder Portfolio" from line-breaking mid-phrase inside its link */
@@ -67,10 +70,10 @@
         <a href="#about" class="nav__link">About</a>
         <a href="#contact" class="nav__link">Contact</a>
         <a href="founder-portfolio.html" class="nav__portfolio">Founder Portfolio</a>
+        <a href="mailto:raj@torallion.com" class="nav__cta">
+          Hire Torallion <span aria-hidden="true">→</span>
+        </a>
       </div>
-      <a href="mailto:raj@torallion.com" class="nav__cta">
-        Hire Torallion <span aria-hidden="true">→</span>
-      </a>
       <button class="nav__theme" aria-label="Toggle theme" title="Switch to light">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
       </button>
@@ -125,7 +128,7 @@
       <div class="hero__art">
         <div class="hero__t-bg"></div>
         <div class="hero__t hero__t--image">
-          <img src="assets/hero-home.webp" alt="Damian Rajamanie" style="width:100%;height:100%;object-fit:cover;border-radius:24px" />
+          <img src="assets/hero-home.webp" alt="Damian Rajamanie" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:24px" />
         </div>
       </div>
     </div>

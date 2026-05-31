@@ -24,9 +24,12 @@
     @media (max-width: 460px) {
       .nav__inner { gap: 8px; padding-left: 14px; padding-right: 14px; }
     }
+    /* Centre the Hire Torallion CTA in the mobile dropdown.
+       styles.css sets align-self:flex-start (left-aligned, auto width) — override to centre. */
+    .nav.open .nav__cta { align-self: center; }
     /* Force the CSS grid to centre hero art on mobile (margin:auto alone is unreliable on grid items) */
     @media (max-width: 900px) { .hero__art { justify-self: center; } }
-    /* When "TORALLION TECHNOLOGIES" wraps to two lines, centre both lines so the shorter word
+/* When "TORALLION TECHNOLOGIES" wraps to two lines, centre both lines so the shorter word
        doesn't hang left — harmless when on one line (container = text width, centering = no-op) */
     .footer__brand > div { text-align: center; }
     /* Prevent "Founder Portfolio" from line-breaking mid-phrase inside its link */
@@ -67,10 +70,10 @@
         <a href="index.html#about" class="nav__link">About</a>
         <a href="index.html#contact" class="nav__link">Contact</a>
         <a href="#top" class="nav__portfolio nav__portfolio--active" aria-current="page">Founder Portfolio</a>
+        <a href="mailto:raj@torallion.com" class="nav__cta">
+          Hire Torallion <span aria-hidden="true">→</span>
+        </a>
       </div>
-      <a href="mailto:raj@torallion.com" class="nav__cta">
-        Hire Torallion <span aria-hidden="true">→</span>
-      </a>
       <button class="nav__theme" aria-label="Toggle theme" title="Switch to light">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
       </button>
@@ -85,8 +88,8 @@
   </nav>
 
   <!-- Founder Hero -->
-  <header class="hero hero--portfolio" id="top">
-    <div class="hero__inner hero__inner--portfolio">
+  <header class="hero" id="top">
+    <div class="hero__inner">
       <div>
         <div class="hero__eyebrow eyebrow">Founder Portfolio · Damian Rajamanie</div>
         <h1 class="hero__title">
@@ -109,10 +112,10 @@
           </a>
         </div>
       </div>
-      <div class="hero__art" aria-hidden="true">
+      <div class="hero__art">
         <div class="hero__t-bg"></div>
-        <div class="hero__t hero__t--portrait">
-          <img src="assets/founder-portrait-hero.webp" alt="Damian Rajamanie" style="width:100%;height:100%;object-fit:cover;border-radius:24px" />
+        <div class="hero__t hero__t--image">
+          <img src="assets/founder-portrait-hero.webp" alt="Damian Rajamanie" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:24px" />
         </div>
       </div>
     </div>
@@ -257,7 +260,7 @@
             <div class="title-card__platforms">
               <span class="tag">XBLA</span>
             </div>
-            <p style="font-size:13.5px;color:var(--text-soft);margin:0 0 14px">4-player co-op platformer — Xbox Live Arcade.</p>
+            <p style="font-size:13.5px;color:var(--text-soft);margin:0 0 14px">4-player co-op platformer — Xbox Live Arcade. Enemy behaviours.</p>
             <a class="title-card__link" href="https://en.wikipedia.org/wiki/South_Park:_Tenorman%27s_Revenge" target="_blank" rel="noopener noreferrer">
               About the game <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
             </a>
@@ -338,7 +341,7 @@
             <div class="title-card__platforms">
               <span class="tag">Nintendo DS</span>
             </div>
-            <p style="font-size:13.5px;color:var(--text-soft);margin:0 0 14px">Action-RPG — Nintendo DS port.</p>
+            <p style="font-size:13.5px;color:var(--text-soft);margin:0 0 14px">Action-RPG — Level creation tools, combat mechanics.</p>
             <a class="title-card__link" href="https://en.wikipedia.org/wiki/X-Men:_Destiny" target="_blank" rel="noopener noreferrer">
               About the game <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
             </a>
