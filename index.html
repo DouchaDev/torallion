@@ -1,51 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <title>Damian Rajamanie | Technical Director</title>
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/components.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Torallion Technologies — Senior Games Engineering, On Contract</title>
+  <meta name="description" content="Torallion Technologies is the independent practice of Damian Rajamanie, MSc — 17 years of shipped titles, senior Unity &amp; C++ programming, live-service operations and project leadership available to studios and start-ups across Canada." />
+  <link rel="icon" type="image/png" href="assets/torallion-T.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body data-theme="dark" data-scanlines="off" data-grid="on" data-page="home">
 
-<div id="nav-placeholder"></div>
+  <!-- Synthwave grid -->
+  <div class="site-grid" aria-hidden="true">
+    <div class="site-grid__sun"></div>
+    <div class="site-grid__floor"></div>
+    <div class="site-grid__fade"></div>
+  </div>
 
-<section class="hero">
-    <h1>Damian Rajamanie</h1>
-    <h2>Technical Director & Senior Software Engineer</h2>
-    <p>
-        17+ years in the games industry leading engineering teams, architecting scalable systems,
-        and shipping live-service titles across PC, console, mobile, and VR.
-    </p>
-</section>
-
-<section class="section">
-    <h2>Focus</h2>
-    <p class="lead">
-        I specialize in technical leadership, backend architecture, CI/CD, and performance optimization,
-        with a strong background in Unity, C#, C++, and cloud-backed live services.
-    </p>
-    <div class="grid grid-3">
-        <div class="panel">
-            <h3>Technical Leadership</h3>
-            <p>Aligning teams on shared architecture, mentoring engineers, and delivering features on tight timelines.</p>
-        </div>
-        <div class="panel">
-            <h3>Systems & Backend</h3>
-            <p>Designing and operating backend services, BaaS integrations, and deployment pipelines for live games.</p>
-        </div>
-        <div class="panel">
-            <h3>Performance & Optimization</h3>
-            <p>Improving frame rates, memory usage, and load times across console, PC, mobile, and VR platforms.</p>
-        </div>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">
+        <span class="nav__brand-mark">
+          <span class="logo-mark" style="width:48px;height:48px;border-radius:8px">
+            <img src="assets/logo-mark.webp" alt="Torallion Technologies" width="48" height="48" style="width:100%;height:100%;object-fit:cover;border-radius:8px" />
+          </span>
+        </span>
+        <span class="nav__brand-words">
+          <span class="nav__brand-text">TORALLION</span>
+          <span class="nav__brand-sub">Technologies</span>
+        </span>
+      </a>
+      <div class="nav__links">
+        <a href="#services" class="nav__link">Services</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#contact" class="nav__link">Contact</a>
+        <a href="founder-portfolio.html" class="nav__portfolio">Founder Portfolio</a>
+      </div>
+      <a href="mailto:raj@torallion.com" class="nav__cta">
+        Hire Torallion <span aria-hidden="true">→</span>
+      </a>
+      <button class="nav__theme" aria-label="Toggle theme" title="Switch to light">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button class="nav__menu-btn" aria-label="Menu">☰</button>
     </div>
-</section>
+    <div class="nav__bands" aria-hidden="true">
+      <div style="background:var(--brand-brick)"></div>
+      <div style="background:var(--brand-red)"></div>
+      <div style="background:var(--brand-yellow)"></div>
+      <div style="background:var(--brand-cyan)"></div>
+    </div>
+  </nav>
 
-<footer>
-    © 2026 Damian Rajamanie
-</footer>
+  <!-- Hero -->
+  <header class="hero" id="top">
+    <div class="hero__inner">
+      <div>
+        <div class="hero__eyebrow eyebrow">Sole-Proprietor · Charlottetown, PEI</div>
+        <h1 class="hero__title">
+          <span class="hero__title-row">Senior games</span>
+          <span class="hero__title-row hero__title-accent">engineering,</span>
+          <span class="hero__title-row">on contract.</span>
+        </h1>
+        <p class="hero__sub">
+          Torallion Technologies is the independent practice of Damian Rajamanie, MSc — 17 years of
+          credited work on shipped titles, senior-level Unity and C++ programming, live-service operations
+          and project leadership available to studios and start-ups across Canada.
+        </p>
+        <div class="hero__ctas">
+          <a href="#services" class="btn btn--primary">
+            See services <span class="btn__arrow">→</span>
+          </a>
+          <a href="#contact" class="btn btn--ghost">
+            Start a conversation
+          </a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <div class="stat__value">17</div>
+            <div class="stat__label">Years shipping games</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">10+</div>
+            <div class="stat__label">Title credits</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">6</div>
+            <div class="stat__label">Platforms shipped</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__art">
+        <div class="hero__t-bg"></div>
+        <div class="hero__t hero__t--image">
+          <img src="assets/hero-home.webp" alt="Damian Rajamanie" style="width:100%;height:100%;object-fit:cover;border-radius:24px" />
+        </div>
+      </div>
+    </div>
+  </header>
 
-<script src="assets/js/script.js"></script>
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="section-title-row">
+      <div>
+        <div class="eyebrow">Services</div>
+        <h2>What Torallion delivers.</h2>
+      </div>
+      <p>
+        Engagements flex to fit — a few hours of focused consultancy, a short multi-day
+        spike, a multi-month feature sprint, or a long-term embedded contract. Fixed-price
+        milestones where it makes sense.
+      </p>
+    </div>
+    <div class="services">
+
+      <article class="card service">
+        <div class="card__corner" aria-hidden="true">
+          <span style="background:var(--brand-brick)"></span>
+          <span style="background:var(--brand-red)"></span>
+          <span style="background:var(--brand-yellow)"></span>
+          <span style="background:var(--brand-cyan)"></span>
+        </div>
+        <div class="service__num">01 / 04</div>
+        <h3 class="service__title">Contract Games Programming</h3>
+        <p class="service__desc">Senior Unity / C# / C++ engineering — gameplay systems, console certification, optimization, live-service feature work and ports. Drop-in at any stage from prototype to ship.</p>
+        <div class="service__tags">
+          <span class="tag">Unity</span><span class="tag">C#</span><span class="tag">C++</span><span class="tag">Optimization</span><span class="tag">Console Cert</span><span class="tag">VR/XR</span><span class="tag">PC</span><span class="tag">Xbox</span><span class="tag">PlayStation</span><span class="tag">Nintendo</span><span class="tag">Android</span><span class="tag">iOS</span>
+        </div>
+      </article>
+
+      <article class="card service">
+        <div class="card__corner" aria-hidden="true">
+          <span style="background:var(--brand-brick)"></span>
+          <span style="background:var(--brand-red)"></span>
+          <span style="background:var(--brand-yellow)"></span>
+          <span style="background:var(--brand-cyan)"></span>
+        </div>
+        <div class="service__num">02 / 04</div>
+        <h3 class="service__title">Project Leadership &amp; Planning</h3>
+        <p class="service__desc">Pitch breakdown, time and cost estimation, technical roadmaps, sprint planning, code reviews, hiring panels and mentoring. Senior-level oversight at contract rates.</p>
+        <div class="service__tags">
+          <span class="tag">Agile / Scrum</span><span class="tag">Jira</span><span class="tag">Estimation</span><span class="tag">Mentorship</span><span class="tag">Hiring</span>
+        </div>
+      </article>
+
+      <article class="card service">
+        <div class="card__corner" aria-hidden="true">
+          <span style="background:var(--brand-brick)"></span>
+          <span style="background:var(--brand-red)"></span>
+          <span style="background:var(--brand-yellow)"></span>
+          <span style="background:var(--brand-cyan)"></span>
+        </div>
+        <div class="service__num">03 / 04</div>
+        <h3 class="service__title">Backend &amp; Live-Service</h3>
+        <p class="service__desc">Secure IAP/MTX systems, BaaS architecture on PlayFab and AWS, CI/CD pipelines with Jenkins and GitHub Actions, live operations and certification cadence on 5+ portals.</p>
+        <div class="service__tags">
+          <span class="tag">PlayFab</span><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Jenkins</span><span class="tag">CI/CD</span><span class="tag">IAP/MTX</span>
+        </div>
+      </article>
+
+      <article class="card service">
+        <div class="card__corner" aria-hidden="true">
+          <span style="background:var(--brand-brick)"></span>
+          <span style="background:var(--brand-red)"></span>
+          <span style="background:var(--brand-yellow)"></span>
+          <span style="background:var(--brand-cyan)"></span>
+        </div>
+        <div class="service__num">04 / 04</div>
+        <h3 class="service__title">Tutoring &amp; Technical Coaching</h3>
+        <p class="service__desc">Industry-level instruction in graphics programming, shaders, OpenGL, C# and game project management — currently active sessional at UPEI. One-on-one or small group.</p>
+        <div class="service__tags">
+          <span class="tag">Graphics</span><span class="tag">Shaders</span><span class="tag">OpenGL</span><span class="tag">C#</span><span class="tag">Project Reviews</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="about">
+      <div class="about__panel">
+        <div class="about__portrait">
+          <img src="assets/founder-portrait.webp" alt="Damian Rajamanie" style="width:100%;height:100%;object-fit:cover;border-radius:14px" />
+        </div>
+        <div class="about__sig">
+          <span class="logo-mark" style="width:28px;height:28px;border-radius:6px">
+            <img src="assets/logo-mark.webp" alt="Torallion Technologies" width="28" height="28" style="width:100%;height:100%;object-fit:cover;border-radius:6px" />
+          </span>
+          <div>
+            <div class="about__sig-name">Damian Rajamanie · MSc</div>
+            <div class="about__sig-role">Founder · Programmer · Project Lead</div>
+          </div>
+        </div>
+      </div>
+      <div class="about__copy">
+        <div class="eyebrow">About</div>
+        <h2>The company, and the person behind it.</h2>
+        <p>
+          Torallion Technologies is a one-person games engineering practice based in
+          Charlottetown, PEI. The work is contract programming and project leadership for studios
+          and start-ups across Canada — a senior engineer dropped into your team for as long
+          as the engagement needs.
+        </p>
+        <p>
+          That one person is Damian Rajamanie, MSc — 17 years in games, credited on titles
+          shipped by Other Ocean Interactive, Electronic Arts and IceJam. Torallion is how that
+          experience is now offered direct, without an agency in the middle.
+        </p>
+        <p class="about__network-lead">
+          Damian — he goes by <strong>Raj</strong> — is highly sociable and well connected, with an
+          extensive network of talented individuals, ranging from:
+        </p>
+        <ul class="about__network-list">
+          <li>Artists</li>
+          <li>Technical Artists</li>
+          <li>Coders</li>
+          <li>Designers</li>
+        </ul>
+        <p>
+          These folks have worked at Electronic Arts, Ubisoft and beyond. When a project needs
+          more than one pair of hands, Raj can assemble an elite team of professionals.
+        </p>
+        <div class="about__highlights">
+          <div class="about__highlight">
+            <div class="about__highlight-num">17 yrs</div>
+            <div class="about__highlight-label">Games industry experience</div>
+          </div>
+          <div class="about__highlight">
+            <div class="about__highlight-num">10+</div>
+            <div class="about__highlight-label">Credited shipped titles</div>
+          </div>
+          <div class="about__highlight">
+            <div class="about__highlight-num">5</div>
+            <div class="about__highlight-label">Platforms certified live</div>
+          </div>
+          <div class="about__highlight">
+            <div class="about__highlight-num">MSc</div>
+            <div class="about__highlight-label">Computer Games Programming</div>
+          </div>
+        </div>
+        <a class="btn btn--primary about__portfolio-btn" href="founder-portfolio.html">
+          View Founder Portfolio <span class="btn__arrow">→</span>
+        </a>
+        <p class="about__portfolio-note">
+          Raj's personal credits and demo-reel — separate from Torallion's own work.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__lines">
+        <div class="line-stack line-stack--bold">
+          <div class="line-stack__line line-stack__line--brick"></div>
+          <div class="line-stack__line line-stack__line--red"></div>
+          <div class="line-stack__line line-stack__line--yellow"></div>
+          <div class="line-stack__line line-stack__line--cyan"></div>
+        </div>
+      </div>
+      <div class="eyebrow" style="justify-content:center;display:inline-flex">Get in touch</div>
+      <h2 class="contact__title">Ready to talk about your project?</h2>
+      <p class="contact__sub">
+        Available now for contract programming, technical leadership, prototype work and short consulting
+        engagements. PEI-based, fully remote across Canadian time zones.
+      </p>
+      <div class="contact__methods">
+        <a class="contact__method" href="mailto:raj@torallion.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg>
+          raj@torallion.com
+        </a>
+        <a class="contact__method" href="https://www.linkedin.com/in/damian-rajamanie" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8h4.56v14H.22V8zm7.4 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 7v7.44h-4.56v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.53 1.72-2.53 3.49V22H7.62V8z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+      <div class="contact__location">Charlottetown · Prince Edward Island · Canada</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="logo-mark" style="width:28px;height:28px;border-radius:6px">
+        <img src="assets/logo-mark.webp" alt="Torallion Technologies" width="28" height="28" style="width:100%;height:100%;object-fit:cover;border-radius:6px" />
+      </span>
+      <div>
+        <div style="font-family:var(--font-display);font-size:13px;letter-spacing:0.14em">TORALLION TECHNOLOGIES</div>
+        <div class="footer__copy">© 2026 · Damian Rajamanie · PEI, CA</div>
+      </div>
+    </div>
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <a class="footer__link" href="index.html#services">Services</a>
+      <a class="footer__link" href="index.html#about">About</a>
+      <a class="footer__link" href="founder-portfolio.html">Founder Portfolio</a>
+      <a class="footer__link" href="index.html#contact">Contact</a>
+    </nav>
+  </footer>
 
 </body>
 </html>
