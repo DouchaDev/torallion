@@ -91,6 +91,7 @@ body {
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  padding-top: 96px;
   transition: background-color .35s ease, color .35s ease;
 }
 
@@ -118,8 +119,10 @@ body[data-scanlines="on"]::before {
 
 /* ---------- Nav ---------- */
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -373,11 +376,10 @@ p { margin: 0 0 1em; color: var(--text-soft); }
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
-  min-height: 88vh;
-  padding: clamp(80px, 12vw, 140px) var(--pad) clamp(80px, 10vw, 140px);
+  padding: clamp(40px, 5vw, 72px) var(--pad) clamp(64px, 8vw, 120px);
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   border-bottom: 1px solid var(--border);
 }
 .hero__inner {
@@ -393,7 +395,7 @@ p { margin: 0 0 1em; color: var(--text-soft); }
 }
 @media (max-width: 900px) {
   .hero__inner { grid-template-columns: 1fr; }
-  .hero__art { order: -1; max-width: 320px; margin-left: auto; margin-right: auto; }
+  .hero__art { display: none; }
 }
 
 .hero__eyebrow {
@@ -1229,7 +1231,7 @@ image-slot { background: transparent; }
 }
 
 /* ---------- Founder Portfolio page hero variant ---------- */
-.hero--portfolio { min-height: auto; padding-bottom: 32px; }
+.hero--portfolio { padding-bottom: 32px; }
 .hero__inner--portfolio { align-items: center; }
 .hero__t--portrait {
   width: 100%;
