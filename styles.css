@@ -488,15 +488,20 @@ p { margin: 0 0 1em; color: var(--text-soft); }
 .hero__stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(16px, 2vw, 32px);
+  gap: clamp(10px, 1.5vw, 20px);
   padding-top: 32px;
-  border-top: 1px solid var(--border);
   max-width: 620px;
+}
+.stat {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elev);
 }
 .stat__value {
   font-family: var(--font-display);
   font-size: clamp(22px, 2.8vw, 32px);
-  color: var(--text);
+  color: var(--accent);
   letter-spacing: 0.02em;
   line-height: 1;
 }
@@ -552,28 +557,12 @@ p { margin: 0 0 1em; color: var(--text-soft); }
   50% { transform: translateY(-6px); }
 }
 
-/* In light mode, swap the dark logo for inverted on a tinted plate */
-[data-theme="light"] .hero__t {
-  background: #0A0E1E;
-  border-radius: 24px;
-  padding: 28px;
-  box-shadow: var(--shadow-lg);
-}
 
 /* Image-slot variant: a square card the user fills with their own art.
    Fills the whole hero__art box edge-to-edge with rounded corners. */
 .hero__t--image {
   inset: 0;
-  border-radius: 24px;
-  overflow: hidden;
-  background: var(--bg-elev);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-lg);
   animation: subtleFloat 8s ease-in-out infinite;
-}
-[data-theme="light"] .hero__t--image {
-  background: var(--bg-elev);
-  padding: 0;
 }
 .hero__t--image image-slot {
   position: absolute;
